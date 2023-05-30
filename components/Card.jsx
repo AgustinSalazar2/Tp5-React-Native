@@ -1,5 +1,8 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+// import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 const Card = ({ datos, posicion, handleEliminar }) => {
   // console.log(datos)
@@ -21,7 +24,8 @@ const Card = ({ datos, posicion, handleEliminar }) => {
         style={styles.container}
         onPress={() => handleEliminar(posicion)}
       >
-        <Text style={styles.boton}>Eliminar</Text>
+        {/* <Icon name="trash" size={20} color="white" /> */}
+        <Text style={styles.boton}><Icon name="trash" size={30} color="white" />  Eliminar</Text>
       </TouchableOpacity>
       
     </View>
@@ -53,14 +57,14 @@ const styles = StyleSheet.create({
   },
   boton: {
     color: "#ffffff",
-    fontSize: 20,
+    fontSize: 20
   },
   logo: {
     // width: 350,
     // height: 300,
     width: 250,
     height: 200,
-    borderRadius: 100,
+    borderRadius: 150,
     margin: 10,
     opacity: 1,
   },
